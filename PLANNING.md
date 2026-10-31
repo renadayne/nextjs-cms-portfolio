@@ -14,18 +14,17 @@
 
 ---
 
-### [ ] Step 1: Khởi tạo Next.js Foundation & Thiết lập Design Tokens
-- Cấu trúc dự án Next.js 14/15 App Router + TypeScript + Tailwind CSS + Lucide Icons.
+### [x] Step 1: Khởi tạo Next.js Foundation & Thiết lập Design Tokens
+- Cấu trúc dự án Next.js 14 App Router + TypeScript + Tailwind CSS + Lucide Icons.
 - Thiết lập bảng màu `Tĩnh Lặng Số (Digital Clarity)` chuẩn theo `DESIGN.md`:
   - Canvas `#FAF8FF`, Surface `#FFFFFF`, Primary `#004AC6` / `#2563EB`, Secondary `#1D4ED8`, Slate Ink `#131B2E`, `#434655`.
   - Phông chữ Google Fonts: `Plus Jakarta Sans` và `JetBrains Mono`.
   - Border radii (12-16px cards, 8-12px inputs), shadows và utilities.
-- Kiểm tra cấu hình và chạy build thành công.
 - **Git Commit:** `feat(core): initialize Next.js project with design tokens and styling foundation`
 
 ---
 
-### [ ] Step 2: Xây dựng Shared Layout, Navigation & Footer
+### [x] Step 2: Xây dựng Shared Layout, Navigation & Footer
 - Header cố định (Sticky Header) với hiệu ứng backdrop blur:
   - Wordmark `Minh Quân.dev`
   - Menu: Trang chủ, Blog, Dự án, Giới thiệu, Liên hệ
@@ -39,41 +38,41 @@
 
 ---
 
-### [ ] Step 3: Xây dựng Data Models & Content Repository Layer
+### [x] Step 3: Xây dựng Data Models & Content Repository Layer
 - Khai báo TypeScript DTOs theo API Contract:
   - `SiteSettings`, `PostSummary`, `PostDetail`, `ProjectSummary`, `ProjectDetail`, `ContactMessage`.
 - Thiết lập Interface `ContentRepository` (Repository Pattern):
   - `MockContentRepository` đọc dữ liệu mẫu có sẵn để hoạt động 100% offline không cần backend.
   - `HttpContentRepository` sẵn sàng kết nối `/api/v1` khi có backend.
 - Tạo bộ dữ liệu mẫu (Fixtures) chuẩn từ Stitch:
-  - 4+ bài viết Tech & Life (tối ưu Web Vitals, kiến trúc Frontend, cuộc sống làm nghề).
-  - 3+ dự án tiêu biểu (HyperFlow, CloudMetrics, DevNotes).
+  - 6 bài viết Tech & Life (tối ưu Web Vitals, kiến trúc Frontend, cuộc sống làm nghề).
+  - 4 dự án tiêu biểu (HyperFlow, CloudMetrics, DevNotes, Zenith Design System).
   - Profile đầy đủ của tác giả.
 - **Git Commit:** `feat(data): implement content repository interface and rich mock datasets`
 
 ---
 
-### [ ] Step 4: Xây dựng Trang Chủ (`/` Home Page)
+### [x] Step 4: Xây dựng Trang Chủ (`/` Home Page)
 - **Hero Section**:
   - Availability pill `Sẵn sàng nhận dự án mới`.
   - H1 tiêu đề, vai trò Senior Frontend Engineer / Product Builder.
   - Thẻ chân dung / workspace và micro-metrics (6+ năm kinh nghiệm, 18+ live products).
   - CTA "Xem dự án" và "Đọc bài viết".
-- **Featured Projects**: Bento grid 3 dự án tiêu biểu theo đúng bản mẫu Stitch.
-- **Latest Posts**: Danh sách 3-4 bài viết mới nhất phân tách nhãn Công nghệ / Đời sống.
+- **Featured Projects**: Bento grid các dự án tiêu biểu theo đúng bản mẫu Stitch.
+- **Latest Posts**: Danh sách 4 bài viết mới nhất phân tách nhãn Công nghệ / Đời sống.
 - **About Teaser & Tech Stack Chips**.
 - **Contact Banner Call-to-action**.
 - **Git Commit:** `feat(home): build modern editorial homepage with featured projects and posts`
 
 ---
 
-### [ ] Step 5: Xây dựng Phân Hệ Blog (`/blog` & `/blog/[slug]`)
+### [x] Step 5: Xây dựng Phân Hệ Blog (`/blog` & `/blog/[slug]`)
 - **Trang `/blog`**:
   - Filter Tabs: Tất cả, Công nghệ (Tech), Đời sống (Life).
   - Search bar có debounce tìm kiếm tiêu đề & trích đoạn.
   - Tag chips filter tương tác.
   - Lưới bài viết với ảnh bìa fallback, category badge, thời gian đọc, ngày đăng.
-  - Phân trang chuẩn query param `?page=1&category=...`.
+  - Phân trang chuẩn query param `?category=...&tag=...&q=...`.
 - **Trang `/blog/[slug]`**:
   - Breadcrumb điều hướng về Blog.
   - Header bài viết: Tiêu đề lớn, tác giả, ngày đăng, thời lượng đọc.
@@ -84,11 +83,11 @@
 
 ---
 
-### [ ] Step 6: Xây dựng Phân Hệ Dự Án (`/projects` & `/projects/[slug]`)
+### [x] Step 6: Xây dựng Phân Hệ Dự Án (`/projects` & `/projects/[slug]`)
 - **Trang `/projects`**:
   - Category Tabs: Tất cả, Sản phẩm Web, Mã nguồn mở, Thiết kế UI/UX.
   - Search bar tìm kiếm dự án.
-  - Thẻ dự án hiển thị vai trò, năm thực hiện, tech stack tags, mô tả bối cảnh.
+  - Thẻ dự án hiển thị vai trò, năm thực hiện, tech stack tags, mô tả bối cảnh và metric preview.
 - **Trang `/projects/[slug]`**:
   - Thông tin dự án: Vai trò, thời gian, tech stack, liên kết demo và GitHub.
   - Case study chi tiết qua Markdown: Bối cảnh, Thách thức, Giải pháp, Kết quả.
@@ -96,7 +95,7 @@
 
 ---
 
-### [ ] Step 7: Xây dựng Trang Giới Thiệu (`/about`) & Liên Hệ (`/contact`)
+### [x] Step 7: Xây dựng Trang Giới Thiệu (`/about`) & Liên Hệ (`/contact`)
 - **Trang `/about`**:
   - Tiểu sử chi tiết và hình ảnh không gian làm việc.
   - Kỹ năng & Công nghệ phân nhóm (Frontend, Architecture, Tools, UI/UX).
@@ -111,7 +110,7 @@
 
 ---
 
-### [ ] Step 8: Xây dựng Studio Admin Dashboard (`/studio`)
+### [x] Step 8: Xây dựng Studio Admin Dashboard (`/studio`)
 - Cấu trúc layout Studio riêng biệt với Sidebar navigation.
 - Session guard & Trang đăng nhập `/studio/login`.
 - **Quản lý Bài viết (`/studio/posts`)**:
@@ -127,7 +126,7 @@
 
 ---
 
-### [ ] Step 9: SEO, Performance, Fallback States & Hoàn Thiện
+### [x] Step 9: SEO, Performance, Fallback States & Hoàn Thiện
 - Metadata Open Graph, Twitter Cards, Canonical URLs.
 - Sinh tự động `sitemap.xml` và `robots.txt`.
 - Xây dựng trang 404 tùy biến đẹp mắt và Error Boundary.
