@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-plus-jakarta: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-jetbrains-mono: "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: #faf8ff;
+    color: #131b2e;
+    font-family: var(--font-plus-jakarta);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #dbe1ff;
+    color: #00174b;
+  }
+}
+
+@layer utilities {
+  .text-display-xl {
+    font-size: 56px;
+    line-height: 68px;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+  }
+  .text-display-xl-mobile {
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+  .text-headline-lg {
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+  }
+  .text-headline-lg-mobile {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+  .text-headline-md {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+  .text-headline-sm {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+  .text-body-editorial {
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.005em;
+  }
+  .text-body-default {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0em;
+  }
+  .text-body-sm {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0em;
+  }
+  .text-label-md {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+  }
+  .text-label-sm {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+  }
+  .text-code-inline {
+    font-family: var(--font-jetbrains-mono);
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* Code block highlight styling */
+pre {
+  background-color: #131b2e !important;
+  color: #eef0ff !important;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+  font-family: var(--font-jetbrains-mono);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+code {
+  font-family: var(--font-jetbrains-mono);
+}
+
+:not(pre) > code {
+  background-color: #f2f3ff;
+  color: #004ac6;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.375rem;
+  font-size: 0.875em;
+  font-weight: 500;
+}
